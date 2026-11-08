@@ -1,0 +1,44 @@
+/* Spelling Nest's web pages (privacy policy, terms of use): the app's robin colours. */
+:root {
+  --bg: #FBF6EE;      /* belly cream */
+  --card: #FFFFFF;
+  --ink: #2E2118;     /* back brown */
+  --muted: #6B5B4E;
+  --line: #EFE5D7;
+  --band: #35647F;    /* the blue-grey band */
+  --breast: #E8622C;  /* breast orange */
+  --draft: #FFF3D6;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1E1813; --card: #2A221B; --ink: #F5EDE3; --muted: #C9B9A8; --line: #3A3028; --band: #8DB8D2; --breast: #F0855A; --draft: #3D3220;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.6 "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; }
+header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+header img { width: 56px; height: 56px; object-fit: contain; }
+header a { color: var(--band); font: 700 22px/1.2 "Fredoka", system-ui, sans-serif; text-decoration: none; }
+h1 { font: 700 32px/1.2 "Fredoka", system-ui, sans-serif; margin: 16px 0 4px; }
+h2 { font: 600 22px/1.3 "Fredoka", system-ui, sans-serif; margin: 32px 0 8px; }
+h3 { font: 600 18px/1.3 "Fredoka", system-ui, sans-serif; margin: 20px 0 4px; }
+.updated { color: var(--muted); margin: 0 0 16px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 16px 20px; margin: 16px 0; }
+.card h2 { margin-top: 4px; }
+.draft { background: var(--draft); border: 2px dashed var(--breast); border-radius: 14px; padding: 12px 16px; margin: 16px 0; }
+a { color: var(--band); }
+ul { padding-left: 22px; }
+li { margin: 4px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid var(--line); }
+th { font-weight: 700; }
+.table-wrap { overflow-x: auto; }
+footer { margin-top: 48px; color: var(--muted); font-size: 15px; }
+footer a { margin-right: 16px; }
+.links a { display: inline-block; min-height: 44px; line-height: 44px; margin-right: 20px; font-weight: 700; }
